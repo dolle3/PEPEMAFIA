@@ -373,23 +373,33 @@ Footer 2 -->
                                 alert("ca copied to clipboard: " + text);
                             }
                         </script>
-                            <script>
-                                document.addEventListener('DOMContentLoaded', function() {
-                                    let slides = document.querySelectorAll('.slide');
-                                    let currentSlide = 0;
-                        
-                                    function showSlide(n) {
-                                        slides[currentSlide].classList.remove('active');
-                                        currentSlide = (n + slides.length) % slides.length;
-                                        slides[currentSlide].classList.add('active');
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                let slides = document.querySelectorAll('.slide');
+                                let currentSlide = 0;
+                    
+                                function showSlide(n) {
+                                    for (let i = 0; i < slides.length; i++) {
+                                        slides[i].style.display = "none";
                                     }
-                        
-                                    function nextSlide() {
-                                        showSlide(currentSlide + 1);
+                                    for (let i = n; i < n + 4; i++) {
+                                        if (i >= slides.length) {
+                                            break;
+                                        }
+                                        slides[i].style.display = "block";
                                     }
-                        
-                                    setInterval(nextSlide, 2000); // Change slide every 2 seconds
-                                });
-                            </script>  
+                                }
+                    
+                                function nextSlide() {
+                                    showSlide(currentSlide + 4);
+                                    currentSlide += 4;
+                                    if (currentSlide >= slides.length) {
+                                        currentSlide = 0;
+                                    }
+                                }
+                    
+                                setInterval(nextSlide, 2000); // Change slide every 2 seconds
+                            });
+                        </script>
 </body>
 </html>
