@@ -372,8 +372,12 @@ Footer 2 -->
                                 document.execCommand("copy");
                                 // Remove the textarea
                                 document.body.removeChild(textarea);
+                                
+                                // Display a message to the user
+                                alert("Link copied to clipboard: " + text);
                             }
                         </script>
+                        
                         
 </body>
 </html>
