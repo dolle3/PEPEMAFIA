@@ -176,21 +176,17 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
-                                  
                                     <div class="row iq-mt-30">
-                             
                                         <div class="col-lg col-md-4 iq-r-mt-40">
-                                            <div class="iq-small-icon">
-                                                <img src="images/icon/asas.png" width="250" height="250" alt="icon">
-                                                <img src="images/icon/bbbbv.png" width="250" height="250" alt="icon">
-                                                <img src="images/icon/fssfsf.png" width="250" height="250" alt="icon">
-                                                <img src="images/icon/ggfh.png" width="250" height="250" alt="icon">
-                                              
-                                                <!-- <h6>Fair Launch 🚀</h6> -->
+                                            <div class="iq-small-icon slideshow-container">
+                                                <img class="slide" src="images/icon/asas.png" width="250" height="250" alt="icon">
+                                                <img class="slide" src="images/icon/bbbbv.png" width="250" height="250" alt="icon">
+                                                <img class="slide" src="images/icon/fssfsf.png" width="250" height="250" alt="icon">
+                                                <img class="slide" src="images/icon/ggfh.png" width="250" height="250" alt="icon">
                                             </div>
                                         </div>
-                                    
                                     </div>
+                                </div>
                             </div>
                         </section>
 
@@ -377,7 +373,23 @@ Footer 2 -->
                                 alert("ca copied to clipboard: " + text);
                             }
                         </script>
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    let slides = document.querySelectorAll('.slide');
+                                    let currentSlide = 0;
                         
+                                    function showSlide(n) {
+                                        slides[currentSlide].classList.remove('active');
+                                        currentSlide = (n + slides.length) % slides.length;
+                                        slides[currentSlide].classList.add('active');
+                                    }
                         
+                                    function nextSlide() {
+                                        showSlide(currentSlide + 1);
+                                    }
+                        
+                                    setInterval(nextSlide, 2000); // Change slide every 2 seconds
+                                });
+                            </script>  
 </body>
 </html>

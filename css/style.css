@@ -16,6 +16,19 @@ body {
     /* background: #fdf5e2;    ; */
     background: radial-gradient(circle, rgb(247, 56, 56)    10%, rgb(9, 9, 9) 90%);
 }
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
 
 a:hover,
 a:focus,
