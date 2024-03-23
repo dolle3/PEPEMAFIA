@@ -116,10 +116,10 @@
                     </div>
                     <div class="col-lg-12 text-center pb-4 mt-auto">
                         <div class="iq-countdown">
-                            <h5 class="iq-tw-6 iq-font-white mt-auto"><a href="javascript:void(0)"> Introducing A Brand New Nokia ($NOKIA3310) </a>  The Legendary Nokia3310 that is indistructable!
+                            <h5 class="iq-tw-6 iq-font-white mt-auto"><a href="javascript:void(0)"> Introducing A Brand New Nokia ($NOKIA3310) </a>  The Legendary Nokia3310 that is indistructable!</h5><br>
 
                             </h5>
-                            <span>Ca: HcGKXVYdWiTBjrEwC7cwKV844GQ4p272vhZPXitaAJNy</span>
+                            <a href="#" onclick="copyToClipboard('HcGKXVYdWiTBjrEwC7cwKV844GQ4p272vhZPXitaAJNy')"><span>Ca: HcGKXVYdWiTBjrEwC7cwKV844GQ4p272vhZPXitaAJNy</span></a>
                             <div class="mt-4">
                               
                             </div> 
@@ -354,5 +354,26 @@ Footer 2 -->
                                 });
                             });
                         </script>
+                        <script>
+                            function copyToClipboard(text) {
+                                // Create a textarea element
+                                var textarea = document.createElement("textarea");
+                                // Set its value to the text to be copied
+                                textarea.value = text;
+                                // Make it readonly to be able to copy its contents
+                                textarea.setAttribute("readonly", "");
+                                // Hide the textarea from view
+                                textarea.style.position = "absolute";
+                                textarea.style.left = "-9999px";
+                                // Append the textarea to the document
+                                document.body.appendChild(textarea);
+                                // Select and copy the text inside the textarea
+                                textarea.select();
+                                document.execCommand("copy");
+                                // Remove the textarea
+                                document.body.removeChild(textarea);
+                            }
+                        </script>
+                        
 </body>
 </html>
