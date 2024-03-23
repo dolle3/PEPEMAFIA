@@ -178,11 +178,12 @@
                                 <div class="col-sm-12">
                                     <div class="row iq-mt-30">
                                         <div class="col-lg col-md-4 iq-r-mt-40">
-                                            <div class="iq-small-icon slideshow-container">
-                                                <img class="slide" src="images/icon/asas.png" width="250" height="250" alt="icon">
-                                                <img class="slide" src="images/icon/bbbbv.png" width="250" height="250" alt="icon">
-                                                <img class="slide" src="images/icon/fssfsf.png" width="250" height="250" alt="icon">
-                                                <img class="slide" src="images/icon/ggfh.png" width="250" height="250" alt="icon">
+                                            <div class="iq-small-icon">
+                                                <img src="images/icon/asas.png" width="250" height="250" alt="icon">
+                                                <img src="images/icon/bbbbv.png" width="250" height="250" alt="icon">
+                                                <img src="images/icon/fssfsf.png" width="250" height="250" alt="icon">
+                                                <img src="images/icon/ggfh.png" width="250" height="250" alt="icon">
+                                                <!-- <h6>Fair Launch 🚀</h6> -->
                                             </div>
                                         </div>
                                     </div>
@@ -372,34 +373,6 @@ Footer 2 -->
                                 // Display a message to the user
                                 alert("ca copied to clipboard: " + text);
                             }
-                        </script>
-                        <script>
-                            document.addEventListener('DOMContentLoaded', function() {
-                                let slides = document.querySelectorAll('.slide');
-                                let currentSlide = 0;
-                    
-                                function showSlide(n) {
-                                    for (let i = 0; i < slides.length; i++) {
-                                        slides[i].style.display = "none";
-                                    }
-                                    for (let i = n; i < n + 4; i++) {
-                                        if (i >= slides.length) {
-                                            break;
-                                        }
-                                        slides[i].style.display = "block";
-                                    }
-                                }
-                    
-                                function nextSlide() {
-                                    showSlide(currentSlide + 4);
-                                    currentSlide += 4;
-                                    if (currentSlide >= slides.length) {
-                                        currentSlide = 0;
-                                    }
-                                }
-                    
-                                setInterval(nextSlide, 2000); // Change slide every 2 seconds
-                            });
                         </script>
 </body>
 </html>
